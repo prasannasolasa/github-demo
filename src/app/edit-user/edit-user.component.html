@@ -1,0 +1,25 @@
+<div>
+  <div [formGroup]="editUserDetails" (ngSubmit)="validate()">
+    <div *ngIf="usertoEdit">
+      <label>Id:</label>
+      <input type="text" formControlName="id" value="{{editUser.id}}"><br>
+      <label>Name:</label>
+      <input type="text" formControlName="name" value="{{editUser.name}}"><br>
+      <label>Password:</label>
+      <input type="text" formControlName="password" value="{{editUser.password}}"><br>
+      <label>Email:</label>
+      <input type="text" formControlName="email" value="{{editUser.email}}"><br>
+      <label>Role:</label>
+      <input type="text" formControlName="role" value="{{editUser.role}}"><br>
+      <div formGroupName="address">
+        <label>City:</label>
+        <input type="text" formControlName="city" value="{{editUser.address.city}}"><br>
+      </div>
+     
+      <div formGroupName="address">
+        <label>Zipcode:</label>
+        <input type="text" formControlName="zipCode" value="{{editUser.address.zipCode}}"><br>
+        </div>
+      <button class="btn btn-primary" (click)="saveUser(editUser)">Save</button>
+    </div>
+  </div>

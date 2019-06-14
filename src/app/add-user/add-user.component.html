@@ -1,0 +1,56 @@
+<div class="container">
+    <form class="form-signin" [formGroup]="addUser" (ngSubmit)="validateUser()">
+        <h4>Add user</h4>
+        <label>Id:</label>
+        <input type="text" formControlName="id"><br>
+        <div *ngIf="addUserValidation && addUser.controls.id.errors">
+            <div *ngIf="addUser.controls.id.errors.required" style="color:red">Id is required</div>
+        </div>
+        <label>Name: </label>
+        <input type="text" formControlName="name" placeholder="Name is required"><br>
+        <div *ngIf="addUserValidation && addUser.controls.name.errors">
+            <div *ngIf="addUser.controls.name.errors.required" style="color: red">Name is required</div>
+            <div *ngIf="addUser.controls.name.errors.minlength" style="color: red">Length should be min 2 </div>
+        </div>
+        <label>Password: </label>
+        <input type="text" formControlName="password" placeholder="Password is required"><br>
+        <div *ngIf="addUserValidation && addUser.controls.password.errors">
+            <div *ngIf="addUser.controls.password.errors.required" style="color: red">Password is required</div>
+        </div>
+        <label>Email: </label>
+        <input type="text" formControlName="email" placeholder="Email is required"><br>
+        <div *ngIf="addUserValidation && addUser.controls.email.errors">
+            <div *ngIf="addUser.controls.email.errors.required" style="color: red">Email is required</div>
+        </div>
+        <label>Role: </label>
+        <!-- <input type="text" formControlName="role" placeholder="Role is required"><br> -->
+        <select formControlName="role">
+            <option value="Guest">Guest</option>
+            <option value="super">Super</option>
+        </select>
+        <div *ngIf="addUserValidation && addUser.controls.role.errors">
+            <div *ngIf="addUser.controls.role.errors.required" style="color: red">role is required</div>
+        </div>
+        <div formGroupName="address">
+            <div class="form-group">
+                <label>City </label>
+                <input type="text" formControlName="city" placeholder="city is required"><br>
+                <div *ngIf="addUserValidation && addUser.controls.address.controls.city.errors">
+                    <div *ngIf="addUser.controls.address.controls.city.errors.required" style="color: red">city is required</div>
+                </div>
+            </div>
+        </div>
+        <div formGroupName="address">
+            <div class="form-group">
+                <label>Zipcode </label>
+                <input type="text" formControlName="zipCode" placeholder="Zipcode is required"><br>
+                <div *ngIf="addUserValidation && addUser.controls.address.controls.zipCode.errors">
+                    <div *ngIf="addUser.controls.address.controls.zipCode.errors.required" style="color: red">zipcode is required</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add user</button>
+    </form>
+
+</div>

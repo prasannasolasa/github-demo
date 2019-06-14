@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 12,
+      "name": "EADSS",
+      "password": "prasanna123",
+      "email": "prasanna@gmail.com",
+      "role": "guest",
+      "address": {
+        "city": "bangalore",
+        "zipCode": "560100"
+      },
+      "phone": "9611"
+    },
+    {
+      "id": 10,
+      "name": "DBA",
+      "password": "somi123",
+      "email": "somi@gmail.com",
+      "role": "super",
+      "address": {
+        "city": "bangalore",
+        "zipCode": "560100"
+      },
+      "phone": "88973"
+    },
+    {
+      "id": 14,
+      "name": "CAB",
+      "password": "krishna123",
+      "email": "krishna@gmail.com",
+      "role": "super",
+      "address": {
+        "city": "bangalore",
+        "zipCode": "560100"
+      },
+      "phone": "88973"
+    },
+    {
+      "id": "5",
+      "name": "Radha",
+      "password": "radha123",
+      "email": "radha@gmail.com",
+      "role": "super",
+      "address": {
+        "city": "Hyderabad",
+        "zipCode": "560"
+      }
+    }
+  ]
+}

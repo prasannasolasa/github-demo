@@ -1,0 +1,23 @@
+<div>
+    <!--<img src="{{imgUrl}}" height="200" width="200"/>
+     <img [src]="desertimgUrl" height="200" width="200"/> -->
+    <table class="table table-bordered table-dark">
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Role</td>
+        <td>City</td>
+      </tr>
+      <tr>
+      <td>{{userdetails.id}}</td>
+      <td>{{userdetails.name}}</td>
+      <td>{{userdetails.email}}</td>
+      <td>{{userdetails.role}}</td>
+      <td>{{userdetails.address.city}}</td>
+      <td><button (click)="onOutput(userdetails.name)">Output</button></td>
+    </tr>
+    </table>  
+   
+  </div>
+  

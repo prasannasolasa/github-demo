@@ -1,0 +1,23 @@
+<div>
+  <!--<img src="{{imgUrl}}" height="200" width="200"/>
+   <img [src]="desertimgUrl" height="200" width="200"/> -->
+  <table class="table table-bordered table-dark">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Role</td>
+      <td>City</td>
+    </tr>
+    <tr *ngFor="let user of users  ">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.address.city}}</td>
+    <td><button class="btn btn-primary" (click)="editUser(user)" >Edit</button>
+    <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button></td>
+  </tr>
+  </table>  
+  <button class="btn btn-danger" (click)="addUser()">Add User</button>
+</div>
